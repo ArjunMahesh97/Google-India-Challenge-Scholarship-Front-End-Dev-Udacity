@@ -11,6 +11,8 @@ public class Tower : MonoBehaviour {
     [SerializeField] float attackRange = 5f;
     [SerializeField] ParticleSystem projectile;
 
+    public Waypoint baseWaypoint;
+
 	// Use this for initialization
 	void Start () {
 		
