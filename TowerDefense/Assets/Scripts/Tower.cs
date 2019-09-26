@@ -36,7 +36,7 @@ public class Tower : MonoBehaviour {
     private void SetTargetEnemy()
     {
         var sceneEnemies = FindObjectsOfType<EnemyDamage>();
-        Debug.Log(sceneEnemies[0].transform);
+        //Debug.Log(sceneEnemies[0].transform);
         if (sceneEnemies.Length == 0) { return; }
 
         Transform closestEnemy = sceneEnemies[0].transform;

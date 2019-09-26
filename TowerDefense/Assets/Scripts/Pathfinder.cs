@@ -78,7 +78,7 @@ public class Pathfinder : MonoBehaviour {
             Exploreneighbors();
         }
 
-        print("Finished pathfinding?");
+        //print("Finished pathfinding?");
     }
 
     private void HaltIfEndFound()
