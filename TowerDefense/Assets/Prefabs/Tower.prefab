@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0eea25d1c6d03a439fd3a4973512376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToPan: {fileID: 0}
+  objectToPan: {fileID: 4100988207214532}
   attackRange: 30
   projectile: {fileID: 198637320507673520}
   baseWaypoint: {fileID: 0}

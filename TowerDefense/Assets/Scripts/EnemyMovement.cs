@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
+    [SerializeField] float movementPeriod = 1f;
+    [SerializeField] ParticleSystem winParticle;
 
 	// Use this for initialization
 	void Start () {
@@ -14,15 +16,23 @@ public class EnemyMovement : MonoBehaviour {
 
     IEnumerator FollowPath(List<Waypoint> path)
     {
-        foreach(Waypoint waypoint in path)
+        foreach (Waypoint waypoint in path)
         {
             transform.position = waypoint.transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(movementPeriod);
         }
+        EnemyWin();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void EnemyWin()
+    {
+        var deathEffect = Instantiate(winParticle, transform.position, Quaternion.identity);
+        deathEffect.Play();
+        Destroy(gameObject);
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
