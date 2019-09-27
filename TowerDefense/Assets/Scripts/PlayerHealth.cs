@@ -10,6 +10,8 @@ public class PlayerHealth : MonoBehaviour {
 
     [SerializeField] Text health;
 
+    [SerializeField] AudioClip enemyWinSFX;
+
 	// Use this for initialization
 	void Start () {
         health.text = playerHealth.ToString();
@@ -22,6 +24,7 @@ public class PlayerHealth : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
+        GetComponent<AudioSource>().PlayOneShot(enemyWinSFX);
         playerHealth -= healthDecrease;
         health.text = playerHealth.ToString();
     }
